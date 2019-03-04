@@ -1,0 +1,808 @@
+/* Parallax scrolling based on Jonathan Nicol's tutorial @ f6design.com */
+
+/* HTML5 display-role reset for older browsers */
+article, cite, blockquote, section, footer, header, nav, section {
+	display: block;
+}
+
+/* Page structure & Typography*/
+
+html { 
+	overflow-y: scroll; /* always force a scrollbar in non-IE */
+	overflow-x: hidden;
+	background: url(../img/pngfiles/background-01.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-position: left 0% top 0%;
+	}
+body {
+	margin: 0; padding: 0;
+	font-family: ITCKRISTimport;
+	text-align: center;
+	height: 5650px;
+	max-height: 100%;
+	width: 100%;
+	}
+#title {
+	color: black;
+	font-size: 70px;
+	text-shadow: yellow 2px 2px 2px;
+}
+#title2 {
+	color: #00FFFF;
+	font-size: 30px;
+	text-shadow: #000 2px 2px 2px;
+}
+@font-face {
+    font-family: ITCKRISTimport;
+    src: url('../fonts/ITCKRIST.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Navigation*/
+
+nav	{
+	z-index: 6;
+	position: fixed;
+	top: 0px;
+	background-color: #181818;
+	width: 100%;
+	}
+
+nav ul	{list-style-type: none;}
+
+nav ul li	{display: inline;}
+
+nav ul li a	{
+	color: #ffffff;
+	text-decoration: none;
+	padding: 0 20px;}
+	
+nav	ul li a:hover	{color: #ee6557;}
+
+nav	ul li a.active	{color: #16a6b6;}
+	
+/* Parallax Content*/
+section {
+	/*background-color: #393939;*/
+}
+panel1, panel2, panel3, panel4 {
+	
+}
+#panel1 {
+	position: absolute;
+	top: 6%;
+	left: 25%;
+}
+#panel2 {
+	position: absolute;
+	top: 115%;
+	left: 50%;
+	width: 50%;
+}
+#panel3 {
+	position: absolute;
+	top: 213%;
+	left: 50%;
+	width: 50%;
+}
+#panel4 {
+	position: absolute;
+	top: 320%;
+	left: 50%;
+	width: 50%;
+}
+#panel5 {
+	position: absolute;
+	top: 446%;
+	left: 50%;
+	width: 50%;
+}
+#panel6 {
+	position: absolute;
+	top: 545%;
+	left: 50%;
+	width: 50%;
+}
+
+.content {
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px 0px 200px 0px;
+}
+#panel6 {
+	padding: 0px 0px 200px 0px;
+}
+/* Parallax Level 2 Images */
+#parallax-bg2 {
+	z-index: 5;
+	position: absolute;
+	left: 10%; /* align left edge with center of viewport */
+	top: 0;
+	width: 10%;
+}
+#parallax-bg2 img {
+	width: 250%;
+	opacity: 0.35;
+}
+#parallax-bg1 img {
+	width: 250%;
+	opacity: 0.35;
+}
+#bg2-1 {
+	position: absolute;
+	top: 380px;
+	left: 500px;
+}
+#bg2-2 {
+	position: absolute;
+	top: 850px;
+	left: -150px;
+}
+#bg2-3 {
+	position: absolute;
+	top: 1450px;
+	left: 450px;
+}
+#bg2-4 {
+	position: absolute;
+	top: 1650px;
+	left: 700px;
+}
+#bg2-5 {
+	position: absolute;
+	top: 2150px;
+	left: 900px;
+}
+/* Parallax Level 1 Images */
+#parallax-bg1 {
+	z-index: 5;
+	position: absolute;
+	left: 10%; /* align left edge with center of viewport */
+	top: 0;
+	width: 10%;
+}
+#bg1-1 {
+	position: absolute;
+	top: 3280px;
+	left: 10px;
+}
+#bg1-2 {
+	position: absolute;
+	top: 4650px;
+	left: 950px;
+}
+#bg1-3 {
+	position: absolute;
+	top: 4150px;
+	left: 400px;
+}
+#bg1-4 {
+	position: absolute;
+	top: 5050px;
+	left: 200px;
+}
+/* animations section */
+/* bike animations page 1 */
+#bike {
+	width: 11.5%;
+	height: 20%;
+	position: relative;
+	left: 0%;
+	top: 0%;
+}
+.moveimg {
+	position: absolute;
+	width: 110%;
+	left: 755%;
+	top: 240%;
+}
+#fun {
+	font-size: 60px;
+	position: absolute;
+	left: -24.5%;
+	color: aqua;
+	text-shadow: #000 2px 2px 2px;
+	
+}
+#fun2 {
+	font-size: 60px;
+	position: absolute;
+	top: 10%;
+	left: -13.5%;
+	color: aqua;
+	text-shadow: #000 2px 2px 2px;
+	
+}
+#fun3 {
+	font-size: 60px;
+	position: absolute;
+	top: 10%;
+	left: -21.5%;
+	color: aqua;
+	text-shadow: #000 2px 2px 2px;
+	
+}
+#fun4 {
+	position: relative;
+	left: -10%;
+	top: 80px;
+	font-size: 50px;
+	color: aqua;
+	text-shadow: #000 2px 2px 2px;
+	
+}
+#fun5 {
+	font-size: 60px;
+	position: absolute;
+	top: -12%;
+	left: -41.5%;
+	color: aqua;
+	text-shadow: #000 2px 2px 2px;
+	
+}
+.bike {
+	position: absolute;
+	top: 328.8%;
+	left: 620%;
+	width: 200px;
+	height: 220px;
+	z-index: 5;
+}
+.wheel1 {
+	position: absolute;
+	top: 401.8%;
+	left: 594.1%;
+	width: 55.5%;
+	height: 60.5%;
+	z-index: 4;
+}
+.wheel2 {
+	position: absolute;
+	top: 401.8%;
+	left: 688%;
+	width: 55.5%;
+	height: 60.5%;
+	z-index: 4;
+}
+#fact {
+	position: absolute;
+	top: 47%;
+	font-size: 10px;
+	left: 47%;
+	width: 60%;
+	height: 12%;
+	background-color: #ffdb58;
+	border-radius: 50%;
+	z-index: 4;
+	border: 3px solid #000; 
+}
+#bike:hover .bike {
+	-moz-transform: translate(-850px, 0px);
+	-webkit-transform: translate(-850px, 0px);
+	-ms-transform: translate(-850px, 0px);
+	-o-transform: translate(-850px, 0px);
+	transform: translate(-850px, 0px);
+	-moz-transition: 2.0s ease-in-out;
+	-webkit-transition: 2.0s ease-in-out;
+	-ms-transition: 2.0s ease-in-out;
+	-o-transition: 2.0s ease-in-out;
+	transition: 2.0s ease-in-out;
+}
+#bike:hover .wheel1 {
+	-moz-transform: translate(-850px, 0px) rotate(-1080deg);
+	-webkit-transform: translate(-850px, 0px) rotate(-1080deg);
+	-ms-transform: translate(-850px, 0px) rotate(-1080deg);
+	-o-transform: translate(-850px, 0px) rotate(-1080deg);
+	transform: translate(-850px, 0px) rotate(-1080deg);
+	-moz-transition: 2.0s ease-in-out;
+	-webkit-transition: 2.0s ease-in-out;
+	-ms-transition: 2.0s ease-in-out;
+	-o-transition: 2.0s ease-in-out;
+	transition: 2.0s ease-in-out;
+}
+#bike:hover .wheel2 {
+	-moz-transform: translate(-850px, 0px) rotate(-1080deg);
+	-webkit-transform: translate(-850px, 0px) rotate(-1080deg);
+	-ms-transform: translate(-850px, 0px) rotate(-1080deg);
+	-o-transform: translate(-850px, 0px) rotate(-1080deg);
+	transform: translate(-850px, 0px) rotate(-1080deg);
+	-moz-transition: 2.0s ease-in-out;
+	-webkit-transition: 2.0s ease-in-out;
+	-ms-transition: 2.0s ease-in-out;
+	-o-transition: 2.0s ease-in-out;
+	transition: 2.0s ease-in-out;
+}
+#bike:hover #fact {
+	-moz-transform: scale(2.0);
+	-webkit-transform: scale(2.0);
+	-ms-transform: scale(2.0);
+	-o-transform: scale(2.0);
+	transform: scale(2.0);
+	-moz-transition: 1.0s ease-in-out;
+	-webkit-transition: 1.0s ease-in-out;
+	-ms-transition: 1.0s ease-in-out;
+	-o-transition: 1.0s ease-in-out;
+	transition: 1.0s ease-in-out;
+	transition-delay: 1.7s;
+}
+.imagepos7 {
+	position: absolute;
+	width: 85%;
+	top: 270%;
+	left: 55%;
+	z-index: 5;
+}
+.imagepos8 {
+	position: absolute;
+	width: 15%;
+	top: 314%;
+	left: 90%;
+	z-index: 4;
+}
+#bike:hover .imagepos7 {
+	-moz-transform: translate(0px, -120px) scale(2.0) rotate(720deg);
+	-webkit-transform: translate(0px, -120px) scale(2.0) rotate(720deg);
+	-ms-transform: translate(0px, -120px) scale(2.0) rotate(720deg);
+	-o-transform: translate(0px, -120px) scale(2.0) rotate(720deg);
+	transform: translate(0px, -120px) scale(2.0) rotate(720deg);
+	-moz-transition: 1.0s ease-in-out;
+	-webkit-transition: 1.0s ease-in-out;
+	-ms-transition: 1.0s ease-in-out;
+	-o-transition: 1.0s ease-in-out;
+	transition: 1.0s ease-in-out;
+	transition-delay: 1.7s;
+}
+/* bike animations page 2 */
+#bike2 {
+	width: 11.5%;
+	height: 20%;
+	position: absolute;
+	left: 12%;
+	top: 146.8%;
+}
+.moveimg2 {
+	position: absolute;
+	width: 130%;
+	left: 235%;
+}
+.imagepos6 {
+	position: absolute;
+	width: 155%;
+	top: 10%;
+	left: 590%;
+}
+.bike2 {
+	position: absolute;
+	top: 110%;
+	left: 120%;
+	width: 100%;
+	height: 150%;
+	z-index: 5;
+}
+.wheel12 {
+	position: absolute;
+	top: 197%;
+	left: 182%;
+	width: 69.5%;
+	height: 75%;
+	z-index: 4;
+}
+.wheel22 {
+	position: absolute;
+	top: 197%;
+	left: 91%;
+	width: 69.5%;
+	height: 75%;
+	z-index: 4;
+}
+#fact2 {
+	position: absolute;
+	font-size: 5px;
+	top: 77%;
+	left: 649%;
+	width: 60%;
+	height: 60%;
+	z-index: 4; 
+}
+#bike2:hover .bike2 {
+	-moz-transform: translate(700px, 0px);
+	-webkit-transform: translate(700px, 0px);
+	-ms-transform: translate(700px, 0px);
+	-o-transform: translate(700px, 0px);
+	transform: translate(700px, 0px);
+	-moz-transition: 2.0s ease-in-out;
+	-webkit-transition: 2.0s ease-in-out;
+	-ms-transition: 2.0s ease-in-out;
+	-o-transition: 2.0s ease-in-out;
+	transition: 2.0s ease-in-out;
+}
+#bike2:hover .wheel12 {
+	-moz-transform: translate(700px, 0px) rotate(720deg);
+	-webkit-transform: translate(700px, 0px) rotate(720deg);
+	-ms-transform: translate(700px, 0px) rotate(720deg);
+	-o-transform: translate(700px, 0px) rotate(720deg);
+	transform: translate(700px, 0px) rotate(720deg);
+	-moz-transition: 2.0s ease-in-out;
+	-webkit-transition: 2.0s ease-in-out;
+	-ms-transition: 2.0s ease-in-out;
+	-o-transition: 2.0s ease-in-out;
+	transition: 2.0s ease-in-out;
+}
+#bike2:hover .wheel22 {
+	-moz-transform: translate(700px, 0px) rotate(720deg);
+	-webkit-transform: translate(700px, 0px) rotate(720deg);
+	-ms-transform: translate(700px, 0px) rotate(720deg);
+	-o-transform: translate(700px, 0px) rotate(720deg);
+	transform: translate(700px, 0px) rotate(720deg);
+	-moz-transition: 2.0s ease-in-out;
+	-webkit-transition: 2.0s ease-in-out;
+	-ms-transition: 2.0s ease-in-out;
+	-o-transition: 2.0s ease-in-out;
+	transition: 2.0s ease-in-out;
+}
+#bike2:hover .imagepos6 {
+	-moz-transform: translate(0px, -10px) scale(1.9);
+	-webkit-transform: translate(0px, -10px) scale(1.9);
+	-ms-transform: translate(0px, -10px) scale(1.9);
+	-o-transform: translate(0px, -10px) scale(1.9);
+	transform: translate(0px, -10px) scale(1.9);
+	-moz-transition: 1.0s ease-in-out;
+	-webkit-transition: 1.0s ease-in-out;
+	-ms-transition: 1.0s ease-in-out;
+	-o-transition: 1.0s ease-in-out;
+	transition: 1.0s ease-in-out;
+	transition-delay: 1.7s;
+}
+/* bike animations page 3 */
+#images3 {
+	position: relative;
+	left: -25%;
+	top: 212%;
+	z-index: 1;
+}
+.imagepos {
+	width: 35%;
+}
+.imagepos1 {
+	position: absolute;
+	width: 25%;
+	top: 40%;
+	left: 81%;
+}
+#images3:hover .imagepos1 {
+	-moz-transform: scale(3.0) rotate(720deg);
+	-webkit-transform: scale(3.0) rotate(720deg);
+	-ms-transform: scale(3.0) rotate(720deg);
+	-o-transform: scale(3.0) rotate(720deg);
+	transform: scale(3.0) rotate(720deg);
+	-moz-transition: 1.0s ease-in-out;
+	-webkit-transition: 1.0s ease-in-out;
+	-ms-transition: 1.0s ease-in-out;
+	-o-transition: 1.0s ease-in-out;
+	transition: 1.0s ease-in-out;
+}
+/* .s3text p {
+	position: relative;
+	top: 90px;
+	-moz-transform: rotate(-8deg);
+	-webkit-transform: rotate(-8deg);
+	-ms-transform: rotate(-8deg);
+	-o-transform: rotate(-8deg);
+	transform: rotate(-8deg);
+	z-index: 5;
+} */
+/* bike animations page 4 */
+#car {
+	width: 20%;
+	height: 20%;
+	position: absolute;
+	left: 0%;
+	top: 240.5%;
+}
+.moveimg2 {
+	position: absolute;
+	width: 130%;
+	left: 235%;
+}
+.car {
+	position: absolute;
+	top: 735%;
+	left: 120%;
+	width: 130%;
+	height: 120%;
+	z-index: 5;
+}
+/*.wheel12 {
+	position: absolute;
+	top: 197%;
+	left: 202%;
+	width: 155px;
+	height: 155px;
+	z-index: 4;
+}
+.wheel22 {
+	position: absolute;
+	top: 197%;
+	left: 87%;
+	width: 155px;
+	height: 155px;
+	z-index: 4;
+}*/
+.fact4 {
+	position: absolute;
+	font-size: 5px;
+	top: 817%;
+	left: 325%;
+	width: 130%;
+	height: 200%;
+	opacity: 0.0;
+	z-index: 4;
+}
+#car:hover .car  {
+	-moz-transform: translate(700px, 0px);
+	-webkit-transform: translate(700px, 0px);
+	-ms-transform: translate(700px, 0px);
+	-o-transform: translate(700px, 0px);
+	transform: translate(700px, 0px);
+	-moz-transition: 2.0s ease-in-out;
+	-webkit-transition: 2.0s ease-in-out;
+	-ms-transition: 2.0s ease-in-out;
+	-o-transition: 2.0s ease-in-out;
+	transition: 2.0s ease-in-out;
+}
+#fact5 {
+	top: 900%;
+}
+/*#bike2:hover .wheel12 {
+	-moz-transform: translate(700px, 0px) rotate(720deg);
+	-webkit-transform: translate(700px, 0px) rotate(720deg);
+	-ms-transform: translate(700px, 0px) rotate(720deg);
+	-o-transform: translate(700px, 0px) rotate(720deg);
+	transform: translate(700px, 0px) rotate(720deg);
+	-moz-transition: 2.0s ease-in-out;
+	-webkit-transition: 2.0s ease-in-out;
+	-ms-transition: 2.0s ease-in-out;
+	-o-transition: 2.0s ease-in-out;
+	transition: 2.0s ease-in-out;
+}
+#bike2:hover .wheel22 {
+	-moz-transform: translate(700px, 0px) rotate(720deg);
+	-webkit-transform: translate(700px, 0px) rotate(720deg);
+	-ms-transform: translate(700px, 0px) rotate(720deg);
+	-o-transform: translate(700px, 0px) rotate(720deg);
+	transform: translate(700px, 0px) rotate(720deg);
+	-moz-transition: 2.0s ease-in-out;
+	-webkit-transition: 2.0s ease-in-out;
+	-ms-transition: 2.0s ease-in-out;
+	-o-transition: 2.0s ease-in-out;
+	transition: 2.0s ease-in-out;
+} */
+#car:hover .fact4 {
+	opacity: 1.0;
+	-moz-transform: translate(-630px, -450px) scale(2.0);
+	-webkit-transform: translate(-630px, -450px) scale(2.0);
+	-ms-transform: translate(-630px, -450px) scale(2.0);
+	-o-transform: translate(-630px, -450px) scale(2.0);
+	transform: translate(-630px, -450px) scale(2.0);
+	-moz-transition: opacity 0.5s ease-in-out;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-ms-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+	transition-delay: 1.5s;
+}
+/* bike animations page 5 */
+#images4 {
+	position: relative;
+	left: -39%;
+	top: 390%;
+	z-index: 2;
+}
+#images5 {
+	position: relative;
+	left: 12%;
+	top: 360%;
+	z-index: 1;
+}
+.imagepos2 {
+	width: 10%;
+}
+.imagepos3 {
+	position: absolute;
+	left: 50%;
+	top: 322%;
+	width: 19%;
+}
+.imagepos4 {
+	width: 3%;
+	position: absolute;
+	left: 48%;
+	top: -90%;
+}
+#images5:hover .imagepos3 {
+	-moz-transform: translate(0px, 200px) scale(5.0) rotate(720deg);
+	-webkit-transform: translate(0px, 200px) scale(5.0) rotate(720deg);
+	-ms-transform: translate(0px, 200px) scale(5.0) rotate(720deg);
+	-o-transform: translate(0px, 200px) scale(5.0) rotate(720deg);
+	transform: translate(0px, 200px) scale(5.0) rotate(720deg);
+	-moz-transition: 0.5s ease-in-out;
+	-webkit-transition: 0.5s ease-in-out;
+	-ms-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+}
+#images4:hover .imagepos2 {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+	-moz-transition: 1.0s ease-in-out;
+	-webkit-transition: 1.0s ease-in-out;
+	-ms-transition: 1.0s ease-in-out;
+	-o-transition: 1.0s ease-in-out;
+	transition: 1.0s ease-in-out;
+	transition-delay: 1.7s;
+}
+#images4:hover .imagepos4 {
+	opacity: 0.01;
+	-moz-transform: translate(0px, 200px) rotate(360deg);
+	-webkit-transform: translate(0px, 200px) rotate(360deg);
+	-ms-transform: translate(0px, 200px) rotate(360deg);
+	-o-transform: translate(0px, 200px) rotate(360deg);
+	transform: translate(0px, 200px) rotate(360deg);
+	-moz-transition: opacity 0.5s ease-in-out;
+	-webkit-transition: 0.5s ease-in-out;
+	-ms-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+	transition-delay: 1.7s;
+}
+/* bike animations page 6 */
+#audio {
+	position: absolute;
+	top: 564%;
+	left: 50%;
+	width: 10%;
+}
+#bike6 {
+	width: 11.5%;
+	height: 20%;
+	position: absolute;
+	left: 11%;
+	top: 568.5%;
+}
+.moveimg2 {
+	position: absolute;
+	width: 130%;
+	left: 235%;
+}
+.bike6 {
+	position: absolute;
+	top: 108%;
+	left: 120%;
+	width: 100%;
+	height: 150%;
+	z-index: 5;
+}
+.wheel13 {
+	position: absolute;
+	top: 197%;
+	left: 183%;
+	width: 69.5%;
+	height: 75%;
+	z-index: 4;
+}
+.wheel23 {
+	position: absolute;
+	top: 197%;
+	left: 92%;
+	width: 69.5%;
+	height: 75%;
+	z-index: 4;
+}
+#fact6 {
+	position: absolute;
+	font-size: 5px;
+	top: 67%;
+	left: 639%;
+	width: 60%;
+	height: 60%;
+	background-color: #ffdb58;
+	border-radius: 50%;
+	z-index: 4;
+	border: 3px solid #000; 
+}
+#bike6:hover .bike6 {
+	-moz-transform: translate(700px, 0px);
+	-webkit-transform: translate(700px, 0px);
+	-ms-transform: translate(700px, 0px);
+	-o-transform: translate(700px, 0px);
+	transform: translate(700px, 0px);
+	-moz-transition: 2.0s ease-in-out;
+	-webkit-transition: 2.0s ease-in-out;
+	-ms-transition: 2.0s ease-in-out;
+	-o-transition: 2.0s ease-in-out;
+	transition: 2.0s ease-in-out;
+}
+#bike6:hover .wheel13 {
+	-moz-transform: translate(700px, 0px) rotate(720deg);
+	-webkit-transform: translate(700px, 0px) rotate(720deg);
+	-ms-transform: translate(700px, 0px) rotate(720deg);
+	-o-transform: translate(700px, 0px) rotate(720deg);
+	transform: translate(700px, 0px) rotate(720deg);
+	-moz-transition: 2.0s ease-in-out;
+	-webkit-transition: 2.0s ease-in-out;
+	-ms-transition: 2.0s ease-in-out;
+	-o-transition: 2.0s ease-in-out;
+	transition: 2.0s ease-in-out;
+}
+#bike6:hover .wheel23 {
+	-moz-transform: translate(700px, 0px) rotate(720deg);
+	-webkit-transform: translate(700px, 0px) rotate(720deg);
+	-ms-transform: translate(700px, 0px) rotate(720deg);
+	-o-transform: translate(700px, 0px) rotate(720deg);
+	transform: translate(700px, 0px) rotate(720deg);
+	-moz-transition: 2.0s ease-in-out;
+	-webkit-transition: 2.0s ease-in-out;
+	-ms-transition: 2.0s ease-in-out;
+	-o-transition: 2.0s ease-in-out;
+	transition: 2.0s ease-in-out;
+}
+#bike6:hover #fact6 {
+	-moz-transform: scale(3.0);
+	-webkit-transform: scale(3.0);
+	-ms-transform: scale(3.0);
+	-o-transform: scale(3.0);
+	transform: scale(3.0);
+	-moz-transition: 1.0s ease-in-out;
+	-webkit-transition: 1.0s ease-in-out;
+	-ms-transition: 1.0s ease-in-out;
+	-o-transition: 1.0s ease-in-out;
+	transition: 1.0s ease-in-out;
+	transition-delay: 1.7s;
+}
+#audio:hover {
+	-moz-transform: scale(2.0);
+	-webkit-transform: scale(2.0);
+	-ms-transform: scale(2.0);
+	-o-transform: scale(2.0);
+	transform: scale(2.0);
+	-moz-transition: 0.5s ease-in-out;
+	-webkit-transition: 0.5s ease-in-out;
+	-ms-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+}
+.imagepos9 {
+	position: absolute;
+	width: 85%;
+	top: 90%;
+	left: 585%;
+	z-index: 5;
+}
+.imagepos10 {
+	position: absolute;
+	width: 15%;
+	top: 94%;
+	left: 620%;
+	z-index: 4;
+}
+#bike6:hover .imagepos9 {
+	-moz-transform: translate(0px, -120px) scale(2.0) rotate(720deg);
+	-webkit-transform: translate(0px, -120px) scale(2.0) rotate(720deg);
+	-ms-transform: translate(0px, -120px) scale(2.0) rotate(720deg);
+	-o-transform: translate(0px, -120px) scale(2.0) rotate(720deg);
+	transform: translate(0px, -120px) scale(2.0) rotate(720deg);
+	-moz-transition: 1.0s ease-in-out;
+	-webkit-transition: 1.0s ease-in-out;
+	-ms-transition: 1.0s ease-in-out;
+	-o-transition: 1.0s ease-in-out;
+	transition: 1.0s ease-in-out;
+	transition-delay: 1.7s;
+}
